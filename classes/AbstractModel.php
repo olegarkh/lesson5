@@ -86,7 +86,8 @@ abstract class AbstractModel
     {
        $sql = 'DELETE FROM ' . static::$table . ' WHERE id = :id ';
        $db = new DB;
-       $db->query($sql, [':id'=>$id]);
+       $db->query($sql, [':id'=>$id]); // вместо id this->id
+
     }
 
 } 
